@@ -15,17 +15,38 @@ nav {
 }
 
 #mapid {
-    height: 75%;
+    height: 75vh;
 }
 
 #filter {
     height: 50px;
-    background: green;
+    background:#F6F4F0;
     color: white;
+    line-height: 50px;
+}
+
+#filter > button {
+    vertical-align: middle;
+    margin-left: 10px !important;
+}
+
+#filter > span {
+    margin-left: 60px;
+    color: black;
+}
+
+#filter > input {
+    vertical-align: middle;
+    margin-left: 10px !important;
+    height: 30px;
+    color: black;
 }
 
 #deepsearch {
-    height: calc(25% - 100px);
-    background: blue;
-    color: white;
+    height: calc(25vh - 100px);
+}
+
+.buffer-div {
+    padding-left: 60px;
+    display: inline;
 }
