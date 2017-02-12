@@ -8,6 +8,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
     <link rel="stylesheet" href="{% static 'migrate/style.css' %}">
+    <link rel="stylesheet" href="{% static 'migrate/indexstyle.css' %}">
 </head>
 
 <body>
@@ -26,9 +27,9 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
+                    <li class="active"><a href="/">Home</a></li>
                     <li><a href="/resources">Resources</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="/visaview">Visa Info</a></li>
                 </ul>
             </div>
             <!--/.nav-collapse -->
@@ -71,16 +72,31 @@
         </button>
 
         <span>Enter Country:</span>
-        <input type="text">
+        <input type="text" id="countryname">
+        <button type="button" class="btn btn-default" id="countrysearch">
+            Search
+        </button>
     </div>
     <!--THE DEEPSEARCH-->
-    <div id="deepsearch">
+    <!--<div id="deepsearch">
         VISA INFORMATION WOULD GO HERE
-    </div>
+        <div>bruh</div>
+        <div>bruh</div>
+        <div>bruh</div>
+        <div>bruh</div>
+        <div>bruh</div>
+        <div>bruh</div>
+        <div>bruh</div>
+        <div>bruh</div>
+        <div>bruh</div>
+        <div>bruh</div>
+        <div>bruh</div>
+    </div>-->
     <!--ANY RELEVANT JS-->
     <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
     <script src="{% static 'migrate/countrydata.js' %}"></script>
-    <script src="{% static 'migrate/mapscript.js' %}"></script>
+    <script src="{% static 'migrate/coorddata.js' %}"></script>
+    <script src="{% static 'migrate/indexmapscript.js' %}"></script>
     <script src="{% static 'migrate/filterscript.js' %}"></script>
 </body>
 

@@ -1,0 +1,39 @@
+#mapid {
+    height: calc(100vh - 100px);
+}
+
+#filter {
+    height: 50px;
+    /*background:#F6F4F0;
+    color: white;*/
+    background: #2c3e50 !important;
+    color: #fff !important;
+    line-height: 50px;
+}
+
+#filter > button {
+    vertical-align: middle;
+    margin-left: 10px !important;
+}
+
+#filter > span {
+    margin-left: 60px;
+    /*color: black;*/
+    color: #fff !important;
+}
+
+#filter > input {
+    vertical-align: middle;
+    margin-left: 10px !important;
+    height: 30px;
+    color: black;
+}
+
+/*#deepsearch {
+    height: calc(25vh - 100px);
+}*/
+
+.buffer-div {
+    padding-left: 60px;
+    display: inline;
+}

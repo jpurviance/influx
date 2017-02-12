@@ -1,4 +1,5 @@
 var filterBar = document.getElementById("filter");
+var countryNameEl = document.getElementById("countryname");
 
 var countryLocDict = {
     "United States": [39.83, -98.58],
@@ -10,11 +11,32 @@ var countryLocDict = {
     "Mexico": [23.63, -102.6]
 }
 
-filterBar.onclick = function(e) {
+var panToCountry = function (e) {
+    var countryName = countryNameEl.value;
+    console.log("move to country " + countryName);
+    var latlng = coordinateData[countryName];
+    console.log(latlng);
+    if (latlng != null) {
+        console.log(latlng);
+        map.panTo(latlng);
+    }
+}
+
+filterBar.onclick = function (e) {
     if (e.target.dataset.filterType === "hotcountry") {
         console.log("move to country " + e.target.innerText);
         var latlng = countryLocDict[e.target.innerText];
         console.log(latlng);
         map.panTo(latlng);
+    }
+
+    if (e.target.id == 'countrysearch') {
+        panToCountry();
+    }
+}
+
+countryNameEl.onkeyup = function (e) {
+    if (e.which == 13) {
+        panToCountry();
     }
 }

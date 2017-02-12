@@ -14,39 +14,19 @@ nav {
     border: 0px !important;
 }
 
-#mapid {
-    height: 75vh;
+.navbar-brand {
+    color: white !important;
 }
 
-#filter {
-    height: 50px;
-    background:#F6F4F0;
-    color: white;
-    line-height: 50px;
+.navbar {
+    background: #2c3e50 !important;
+    color: #fff !important;
 }
 
-#filter > button {
-    vertical-align: middle;
-    margin-left: 10px !important;
+.navbar-nav > .active > a {
+    background-color: #1A242F !important;
 }
 
-#filter > span {
-    margin-left: 60px;
-    color: black;
-}
-
-#filter > input {
-    vertical-align: middle;
-    margin-left: 10px !important;
-    height: 30px;
-    color: black;
-}
-
-#deepsearch {
-    height: calc(25vh - 100px);
-}
-
-.buffer-div {
-    padding-left: 60px;
-    display: inline;
+.navbar-nav > li > a {
+    color: white !important;
 }
