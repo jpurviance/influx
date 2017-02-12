@@ -97,7 +97,7 @@ def visa(request):
 
     pwd = os.path.dirname(__file__)
 
-    f = open( pwd +'/clean.p', 'rb')
+    f = open( pwd +'/cleaner.p', 'rb')
     dct = pickle.load(f)
     f.close()
     ret = []
