@@ -72,10 +72,11 @@ fetch("/api")
                             countryData = data[layer.feature.properties.name];
                             if (countryData == null) {
                                 inf = "no data available"
-                            } else if (countryData[1] == "") {
+                                inf = "Banned!!!"
+                            } else if (countryData[0] == "") { // was 1
                                 inf = "no data found";
                             } else {
-                                inf = countryData[1];
+                                inf = countryData[0]; // was 1
                             }
                             layer.bindPopup(inf).addTo(map).openPopup();
                         })
