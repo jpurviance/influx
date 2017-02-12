@@ -12,7 +12,7 @@ var countryLocDict = {
 }
 
 var panToCountry = function (e) {
-    var countryName = countryNameEl.value;
+    var countryName = capitalizeEachWord(countryNameEl.value);
     console.log("move to country " + countryName);
     var latlng = coordinateData[countryName];
     console.log(latlng);
@@ -22,10 +22,22 @@ var panToCountry = function (e) {
     }
 }
 
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function capitalizeEachWord(string) {
+    return string
+        .split(' ')
+        .map(capitalizeFirstLetter)
+        .join(' ')
+}
+
 filterBar.onclick = function (e) {
     if (e.target.dataset.filterType === "hotcountry") {
-        console.log("move to country " + e.target.innerText);
-        var latlng = countryLocDict[e.target.innerText];
+        var countryName = capitalizeEachWord(e.target.innerText);
+        console.log("move to country " + countryName);
+        var latlng = countryLocDict[countryName];
         console.log(latlng);
         map.panTo(latlng);
     }

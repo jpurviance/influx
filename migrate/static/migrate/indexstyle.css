@@ -16,7 +16,7 @@
     margin-left: 10px !important;
 }
 
-#filter > span {
+#filter > .inplabel {
     margin-left: 60px;
     /*color: black;*/
     color: #fff !important;
@@ -34,6 +34,60 @@
 }*/
 
 .buffer-div {
-    padding-left: 60px;
+    padding-left: 30px;
     display: inline;
+}
+
+.colour-boxes {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    height: 50px;
+}
+
+.box-div {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.colour-box:nth-child(1) {
+    background: #FFEDA0;
+}
+
+.colour-box:nth-child(2) {
+    background: #FED976;
+}
+
+.colour-box:nth-child(3) {
+    background: #FEB24C;
+}
+
+.colour-box:nth-child(4) {
+    background: #FD8D3C;
+}
+
+.colour-box:nth-child(5) {
+    background: #FC4E2A;
+}
+
+.colour-box:nth-child(6) {
+    background: #E31A1C;
+}
+
+.colour-box:nth-child(7) {
+    background: #BD0026;
+}
+
+.colour-box:nth-child(8) {
+    background: #800026;
+}
+
+.lowlabel {
+    margin-right: 10px;
+}
+
+.highlabel {
+    margin-left: 10px;
 }

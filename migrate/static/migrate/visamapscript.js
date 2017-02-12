@@ -23,7 +23,7 @@ L.Map = L.Map.extend({
 
 
 
-var map = L.map('mapid').setView([51.505, -0.09], 4);
+var map = L.map('mapid').setView([30,0], 3);
 
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -118,3 +118,8 @@ function colorCountries(data) {
 
 //click on any other country, show info to banned countries (in those countries)
 //click on one country to another country, show info between the two
+
+// green = visa not required, #9F9
+// yellow = visa on arrival, #FFD
+// light blue = eVisa, #BFD
+// red = visa required, #F99

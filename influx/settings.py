@@ -28,8 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['influx-migrate.herokuapp.com', 'thehuman.world', 'localhost:8000', 'localhost', '127.0.0.1', '127.0.0.01:8000']
 
 
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+
 
 # Application definition
 
@@ -121,4 +120,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
+
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 STATIC_URL = '/static/'
