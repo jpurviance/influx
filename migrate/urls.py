@@ -9,5 +9,6 @@ urlpatterns = [
     url(r'api/reverse_visa/$', api.reverse_visa, name='reverse_visa'),
     url(r'^$', views.index, name='index'),
     url(r'^resources/$', views.resources, name='resources'),
-    url(r'^visaview/$', views.visaview, name='visaview')
+    url(r'^visaview/$', views.visaview, name='visaview'),
+    url(r'^howto/$', views.howto, name='howto')
 ]

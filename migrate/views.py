@@ -13,3 +13,6 @@ def resources(request):
 
 def visaview(request):
     return render(request, "migrate/visaviews.html", {})
+
+def howto(request):
+    return render(request, "migrate/howto.html", {})
