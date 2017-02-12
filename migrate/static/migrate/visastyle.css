@@ -19,7 +19,7 @@ nav {
 }
 
 #search {
-    height: 50px;
+    /*height: 50px;*/
     line-height: 50px;
     background: #2c3e50 !important;
     color: #fff !important;
@@ -49,4 +49,37 @@ nav {
 .buffer-div {
     padding-left: 60px;
     display: inline;
+}
+
+.colour-boxes {
+    display: inline-block !important;
+    margin: 0px;
+    padding: 0px;
+    height: 50px;
+}
+
+.box-div {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 3px;
+    margin-left: 5px;
+    margin-right: 20px;
+}
+
+.colour-box:nth-child(1) {
+    background: #9F9;
+}
+
+.colour-box:nth-child(2) {
+    background: #FFD;
+}
+
+.colour-box:nth-child(3) {
+    background: #BFD;
+}
+
+.colour-box:nth-child(4) {
+    background: #F99;
 }

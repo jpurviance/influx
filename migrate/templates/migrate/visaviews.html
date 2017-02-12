@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8"> {% load static %}
     <title>Visa info</title>
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="{% static 'migrate/style.css' %}">
     <link rel="stylesheet" href="{% static 'migrate/visastyle.css' %}">
 </head>
+
 <body>
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
@@ -40,10 +42,22 @@
         <button type="button" class="btn btn-default" id="countrysearch">
             Search
         </button>
+        <div class="buffer-div"></div>
+        <div class="colour-boxes">
+            No Visa required
+            <div class="box-div colour-box"></div>
+            Visa on arrival
+            <div class="box-div colour-box"></div>
+            eVisa
+            <div class="box-div colour-box"></div>
+            Visa required
+            <div class="box-div colour-box"></div>
+        </div>
     </div>
     <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
     <script src="{% static 'migrate/countrydata.js' %}"></script>
     <script src="{% static 'migrate/visamapscript.js' %}"></script>
     <script src="{% static 'migrate/searchscript.js' %}"></script>
 </body>
+
 </html>
