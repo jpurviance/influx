@@ -1,3 +1,5 @@
+toastr["info"]("asbdjkwjq");
+
 L.Map = L.Map.extend({
     openPopup: function (popup, latlng, options) {
         if (!(popup instanceof L.Popup)) {
@@ -62,7 +64,7 @@ fetch("/api")
         function onEachFeature(feature, layer) {
             layer.on('click', function (e) {
                 lastClickedCountry = feature.properties.name;
-                fetch('/api/visa?from=' + lastClickedCountry)
+                fetch('/api/reverse_visa?to=' + lastClickedCountry)
                     .then(r => r.json())
                     .then(dat => {
                         var data = dat.d;

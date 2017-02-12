@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.http import JsonResponse
+from django.conf import settings
 import urllib2
 import json
 import pickle
@@ -97,9 +98,21 @@ def visa(request):
 
     pwd = os.path.dirname(__file__)
 
-    f = open( pwd +'/cleaner.p', 'rb')
-    dct = pickle.load(f)
-    f.close()
+    #f = open( pwd +'/cleaner.p', 'rb')
+    #dct = pickle.load(f)
+    #f.close()
+    ret = []
+    if from_c in settings.VISA_DICT:
+        ret = settings.VISA_DICT[from_c]
+    return JsonResponse({'d': ret})
+
+def reverse_visa(request):
+
+    from_c = request.GET['to']
+
+    pwd = os.path.dirname(__file__)
+
+    dct = settings.REVERSE_VISA_DICT
     ret = []
     if from_c in dct:
         ret = dct[from_c]
