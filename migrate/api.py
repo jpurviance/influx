@@ -105,4 +105,18 @@ def visa(request):
         ret = dct[from_c]
     return JsonResponse({'d': ret})
 
+def reverse_visa(request):
+
+    from_c = request.GET['to']
+
+    pwd = os.path.dirname(__file__)
+
+    f = open( pwd +'/reverse_cleaner.p', 'rb')
+    dct = pickle.load(f)
+    f.close()
+    ret = []
+    if from_c in dct:
+        ret = dct[from_c]
+    return JsonResponse({'d': ret})
+
 
