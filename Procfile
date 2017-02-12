@@ -1,1 +1,1 @@
-web: gunicorn influx/wsgi:application
+web: gunicorn influx.wsgi:application
