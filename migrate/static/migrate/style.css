@@ -1,0 +1,32 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+nav {
+    margin-bottom: 0px !important;
+    border: 0px !important;
+}
+
+.navbar-brand {
+    color: white !important;
+}
+
+.navbar {
+    background: #2c3e50 !important;
+    color: #fff !important;
+}
+
+.navbar-nav > .active > a {
+    background-color: #1A242F !important;
+}
+
+.navbar-nav > li > a {
+    color: white !important;
+}

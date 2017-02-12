@@ -73,7 +73,7 @@ countries.addTo(map);
 function colorCountries(data) {
     map.removeLayer(countries);
     // console.log("ayy");
-    // countries.addTo(map);
+    countries.addTo(map);
 }
 
 //click on any other country, show info to banned countries (in those countries)
