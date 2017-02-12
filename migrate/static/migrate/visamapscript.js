@@ -1,3 +1,19 @@
+toastr["info"](`
+Sovereign nations leverage border control to manage the movement of persons and goods from region to region.
+<br/>
+<br/>
+
+Enter a country in the search box to explore the travel restrictions placed on its citizens by other nations.
+<br/>
+<br/>
+
+Green: free movements without a visa <br/>
+Yellow: restricted movement, visa required on entry <br/>
+Blue: restricted movement, visa obtainable online <br/>
+Red: heavily restricted movement, document applications due moths before entry. <br/>
+Black: entry is denied to the country regardless of status
+`)
+
 L.Map = L.Map.extend({
     openPopup: function (popup, latlng, options) {
         if (!(popup instanceof L.Popup)) {
