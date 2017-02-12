@@ -8,7 +8,7 @@ Click on a country to determine the ability to move from a sanctioned nation to 
 <br/>
 <br/>
 
-How it works: fLUX is built upon Sentiment Analysis of President Donald Trump’s Twitter account. Tweets are evaluated for negative tones towards foreign nations, religions and regions. Negative tweets were processed with Google’s Cloud’s entity API.
+How it works: The Human World is built upon Sentiment Analysis of President Donald Trump’s Twitter account. Tweets are evaluated for negative tones towards foreign nations, religions and regions. Negative tweets were processed with Google’s Cloud’s entity API.
 <br/>
 <br/>
 
