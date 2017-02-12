@@ -25,7 +25,7 @@ SECRET_KEY = '@q!s@&)oxbvm97vl_@hwfxb*sc)80ac!-ctuyz=7*)7su@betz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['influx-migrate.herokuapp.com', 'thehuman.world']
 
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
