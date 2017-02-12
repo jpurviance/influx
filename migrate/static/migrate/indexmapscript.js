@@ -1,14 +1,10 @@
 toastr["info"](`
 
-International mobility for all races, religions and ethnicity to the west is the most restricted its been in recent history.
+Explore the map learn about learn about the mobility of nations. Red regions are not permitted to enter the US under President Donald Trump’s Foreign Terrorist Executive Oder. Yellow and orange nations are at risk of sanctions from the president based on his past comments.
 <br/>
 <br/>
 
-Explore the map learn about learn the mobility of nations. Red regions are not permitted to enter the US under President Donald Trump’s Foreign Terrorist Executive Oder. Yellow and orange nations are at risk from sanctions from the president from his past comments.
-<br/>
-<br/>
-
-Click on a country to determine the ability to move from a sectioned nation to the selected region.
+Click on a country to determine the ability to move from a sanctioned nation to the selected region.
 <br/>
 <br/>
 

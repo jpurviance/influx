@@ -23,7 +23,7 @@ L.Map = L.Map.extend({
 
 
 
-var map = L.map('mapid').setView([30,0], 3);
+var map = L.map('mapid').setView([30, 0], 3);
 
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -47,12 +47,6 @@ function style(feature) {
     return styl;
 }
 
-function onEachFeature(feature, layer) {
-    layer.on('click', function (e) {
-
-    })
-}
-
 var countries = L.geoJson(countryData, {
     style: style,
     onEachFeature: onEachFeature,
@@ -69,6 +63,16 @@ var countries = L.geoJson(countryData, {
 });
 
 countries.addTo(map);
+
+function onEachFeature(feature, layer) {
+    layer.on('click', function (e) {
+        var countryName = feature.properties.name;
+        console.log(countryName);
+        fetch("/api/visa/?from=" + countryName)
+            .then(r => r.json())
+            .then(dat => colorCountries(dat.d));
+    })
+}
 
 function colorCountries(data) {
     map.removeLayer(countries);
