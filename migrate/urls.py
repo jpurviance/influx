@@ -6,5 +6,6 @@ app_name = "migrate"
 urlpatterns = [
     url(r'^api/$', api.add, name='add'), 
     url(r'^$', views.index, name='index'),
-    url(r'^resources/$', views.resources, name='resources')
+    url(r'^resources/$', views.resources, name='resources'),
+    url(r'^visaview/$', views.visaview, name='visaview')
 ]

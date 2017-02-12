@@ -10,3 +10,6 @@ def index(request):
 
 def resources(request):
     return render(request, "migrate/resources.html", {})
+
+def visaview(request):
+    return render(request, "migrate/visaviews.html", {})

@@ -84,12 +84,12 @@ fetch("/api")
 
         function bannedStyle(feature) {
             return {
-                fillColor: '#800026',
+                fillColor: '#950101',
                 weight: 2,
                 opacity: 1,
                 color: 'white',
                 dashArray: '3',
-                fillOpacity: 0.3
+                fillOpacity: 0.75
             };
         }
 

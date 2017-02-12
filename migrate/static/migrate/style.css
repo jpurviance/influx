@@ -15,7 +15,7 @@ nav {
 }
 
 #mapid {
-    height: 75vh;
+    height: calc(100vh - 100px);
 }
 
 #filter {
@@ -42,9 +42,9 @@ nav {
     color: black;
 }
 
-#deepsearch {
+/*#deepsearch {
     height: calc(25vh - 100px);
-}
+}*/
 
 .buffer-div {
     padding-left: 60px;
