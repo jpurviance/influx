@@ -62,11 +62,26 @@ fetch("/api")
         function onEachFeature(feature, layer) {
             layer.on('click', function (e) {
                 lastClickedCountry = feature.properties.name;
-                bannedCountries.eachLayer(function (layer) {
-                    layer.bindPopup(feature.properties.name).addTo(map).openPopup();
-                })
-                lastWasBanned = false;
-            })
+                fetch('/api/visa?from=' + lastClickedCountry)
+                    .then(r => r.json())
+                    .then(dat => {
+                        var data = dat.d;
+                        var inf = "";
+                        var countryData = null;
+                        bannedCountries.eachLayer(function (layer) {
+                            countryData = data[layer.feature.properties.name];
+                            if (countryData == null) {
+                                inf = "no data available"
+                            } else if (countryData[1] == "") {
+                                inf = "no data found";
+                            } else {
+                                inf = countryData[1];
+                            }
+                            layer.bindPopup(inf).addTo(map).openPopup();
+                        })
+                        lastWasBanned = false;
+                    });
+            });
         }
 
         function isBanned(name) {
