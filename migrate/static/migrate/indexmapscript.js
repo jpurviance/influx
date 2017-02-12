@@ -76,7 +76,10 @@ fetch("/api")
                             } else if (countryData[0] == "") { // was 1
                                 inf = "no data found";
                             } else {
-                                inf = countryData[0]; // was 1
+                                inf = '<b>' + countryData[0] + '</b>';
+                                if (countryData[1] != ""){
+                                    inf = inf + '<br>' + countryData[1];
+                                }
                             }
                             layer.bindPopup(inf).addTo(map).openPopup();
                         })
