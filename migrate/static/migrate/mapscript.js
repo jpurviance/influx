@@ -21,6 +21,10 @@ L.Map = L.Map.extend({
     }
 });
 
+fetch("/api")
+    .then(r => r.json())
+    .then(dat => { console.log(dat.d)});
+
 var map = L.map('mapid').setView([51.505, -0.09], 4);
 
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
