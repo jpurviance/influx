@@ -1,4 +1,24 @@
-toastr["info"]("asbdjkwjq");
+toastr["info"](`
+
+International mobility for all races, religions and ethnicity to the west is the most restricted its been in recent history.
+<br/>
+<br/>
+
+Explore the map learn about learn the mobility of nations. Red regions are not permitted to enter the US under President Donald Trump’s Foreign Terrorist Executive Oder. Yellow and orange nations are at risk from sanctions from the president from his past comments.
+<br/>
+<br/>
+
+Click on a country to determine the ability to move from a sectioned nation to the selected region.
+<br/>
+<br/>
+
+How it works: fLUX is built upon Sentiment Analysis of President Donald Trump’s Twitter account. Tweets are evaluated for negative tones towards foreign nations, religions and regions. Negative tweets were processed with Google’s Cloud’s entity API.
+<br/>
+<br/>
+
+Explore the other pages to learn about resources if you live in identified regions.
+
+`);
 
 L.Map = L.Map.extend({
     openPopup: function (popup, latlng, options) {

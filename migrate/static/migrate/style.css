@@ -30,3 +30,12 @@ nav {
 .navbar-nav > li > a {
     color: white !important;
 }
+
+.toast-top-right {
+    width: 500px !important;
+}
+
+.toast-info {
+    width: 500px !important;
+    font-size: 1.2em;
+}

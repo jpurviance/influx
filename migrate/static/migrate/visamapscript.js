@@ -1,5 +1,3 @@
-toastr["info"]("asbdjkwjq");
-
 L.Map = L.Map.extend({
     openPopup: function (popup, latlng, options) {
         if (!(popup instanceof L.Popup)) {
