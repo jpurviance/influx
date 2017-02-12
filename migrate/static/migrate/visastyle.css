@@ -1,0 +1,52 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+nav {
+    margin-bottom: 0px !important;
+    border: 0px !important;
+}
+
+#mapid {
+    height: calc(100vh - 100px);
+}
+
+#search {
+    height: 50px;
+    background:#F6F4F0;
+    color: white;
+    line-height: 50px;
+}
+
+#search > button {
+    vertical-align: middle;
+    margin-left: 10px !important;
+}
+
+#search > span {
+    margin-left: 60px;
+    color: black;
+}
+
+#search > input {
+    vertical-align: middle;
+    margin-left: 10px !important;
+    height: 30px;
+    color: black;
+}
+
+/*#deepsearch {
+    height: calc(25vh - 100px);
+}*/
+
+.buffer-div {
+    padding-left: 60px;
+    display: inline;
+}

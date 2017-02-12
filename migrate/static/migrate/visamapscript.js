@@ -29,24 +29,6 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-// L.marker([51.5, -0.09]).addTo(map)
-//     .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-//     .openPopup();
-
-
-function isBanned(name) {
-    var bannedCountryList = [
-        "Syria",
-        "Iraq",
-        "Iran",
-        "Sudan",
-        "Yemen",
-        "Somalia",
-        "Libya"
-    ];
-    return bannedCountryList.indexOf(name) > -1;
-}
-
 function style(feature) {
     var styl = {
         weight: 2,
@@ -55,6 +37,14 @@ function style(feature) {
         dashArray: '3',
         fillOpacity: 0.3
     };
+
+    var fillCol = '#ff0000'; //data[feature.properties.name];
+
+    if (fillCol != null) {
+        styl.fillColor = fillCol;
+    }
+
+    return styl;
 }
 
 function onEachFeature(feature, layer) {
@@ -79,6 +69,12 @@ var countries = L.geoJson(countryData, {
 });
 
 countries.addTo(map);
+
+function colorCountries(data) {
+    map.removeLayer(countries);
+    // console.log("ayy");
+    // countries.addTo(map);
+}
 
 //click on any other country, show info to banned countries (in those countries)
 //click on one country to another country, show info between the two
