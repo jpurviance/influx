@@ -31,26 +31,37 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 //     .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
 //     .openPopup();
 
-function onEachBannedFeature(feature, layer) {
-    var popupContent = "";
+//GLOBALS AHHHHH
+var lastClickedCountry = null;
+var lastWasBanned = false;
 
-    var name = feature.properties.name
-    popupContent += "this country (" + name + ") is banned";
-    layer.bindPopup(popupContent);
+function onEachBannedFeature(feature, layer) {   
+    layer.on('click', function(e) {
+        var popupContent = "";
+        var name = feature.properties.name;
+        if (lastClickedCountry != null && !lastWasBanned) {
+            popupContent = "this country (" + name + ") is banned, last clicked is " + lastClickedCountry;
+        } else {
+            popupContent = "this country (" + name + ") is banned, no last clicked";
+        }
+
+        lastWasBanned = true;
+        layer.bindPopup(popupContent).addTo(map).openPopup();
+    })
 }
 
 function onEachFeature(feature, layer) {
     layer.on('click', function (e) {
-        // console.log(map);
-        time = 0;
+        lastClickedCountry = feature.properties.name;
         bannedCountries.eachLayer(function (layer) {
-            layer.bindPopup("wait what").addTo(map).openPopup();
+            layer.bindPopup(feature.properties.name).addTo(map).openPopup();
         })
+        lastWasBanned = false;
     })
 }
 
 function isBanned(name) {
-    var banned_countries = [
+    var bannedCountryList = [
         "Syria",
         "Iraq",
         "Iran",
@@ -59,7 +70,7 @@ function isBanned(name) {
         "Somalia",
         "Libya"
     ];
-    return banned_countries.indexOf(name) > -1;
+    return bannedCountryList.indexOf(name) > -1;
 }
 
 function style(feature) {
