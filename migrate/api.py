@@ -2,6 +2,8 @@
 from django.http import JsonResponse
 import urllib2
 import json
+import pickle
+import os
 from operator import itemgetter
 import requests
 from django.http import HttpResponseRedirect, HttpResponse
@@ -89,5 +91,18 @@ def get_data(request):
     return JsonResponse({"d": out})
 
 
+def visa(request):
+
+    from_c = request.GET['from']
+
+    pwd = os.path.dirname(__file__)
+
+    f = open( pwd +'/clean.p', 'rb')
+    dct = pickle.load(f)
+    f.close()
+    ret = []
+    if from_c in dct:
+        ret = dct[from_c]
+    return JsonResponse({'d': ret})
 
 
